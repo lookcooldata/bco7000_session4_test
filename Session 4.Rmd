@@ -16,3 +16,47 @@ commit is used to make a checkpoint on the local group (computer)
 use push to link local files with github 
 workflow = work > save > commit > push 
 pull often to stay up to date with your group members 
+
+# Avocado Data Wrangling 
+first need to load the tidyverse library
+```{r}
+
+library(tidyverse)
+library(janitor)
+
+avocado<-read_csv("avocado.csv")
+
+avocado<-avocado%>%clean_names()
+
+avocado%>%head()
+
+```
+
+We use `arrange()` for sorting variables
+
+```{r}
+
+avocado%>%
+  arrange(average_price)%>%
+  head()
+
+```
+
+let's change the order
+```{r}
+
+avocado%>%
+  arrange(desc(average_price))%>%
+  head()
+
+```
+
+let's `select()`
+
+```{r}
+dim(avocado)
+
+avocado_short<-avocado%>%
+  select(date, average_price, total_volume)
+```
+
