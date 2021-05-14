@@ -12,3 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # Data Wrangling Exersises 
 
 **WOW**
+commit is used to make a checkpoint on the local group (computer)
+use push to link local files with github 
+workflow = work > save > commit > push 
+pull often to stay up to date with your group members 
